@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-02T01:37:42.000Z</updated>
+  <updated>2021-07-15T14:37:02.487Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,17 +21,15 @@
     <link href="http://example.com/2021/07/02/%E9%BB%91%E8%8B%B9%E6%9E%9C-Win10%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E6%99%9A8%E5%B0%8F%E6%97%B6%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/"/>
     <id>http://example.com/2021/07/02/%E9%BB%91%E8%8B%B9%E6%9E%9C-Win10%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E6%99%9A8%E5%B0%8F%E6%97%B6%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/</id>
     <published>2021-07-02T01:35:51.000Z</published>
-    <updated>2021-07-02T01:37:42.000Z</updated>
+    <updated>2021-07-15T14:37:02.487Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>修改Windows注册表：</li></ul><p>修改 win10 注册表<br>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation<br>新建一项 DWORD 值 名为 “ RealTimeIsUniversal ”双击改成<br>值为 1</p><p>参考文章：</p><ul><li><a href="https://v2ex.com/t/330394">https://v2ex.com/t/330394</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="修改Windows注册表"><a href="#修改Windows注册表" class="headerlink" title="修改Windows注册表"></a>修改Windows注册表</h3><ol><li>使用快捷键“Win”+ 【R】组合快捷键。在打开后面键入命令：<code>regedit</code></li><li>修改 win10 注册表，点击打开</li></ol><blockquote><p>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\</p></blockquote><p>新建一项 DWORD 值 名为 “ RealTimeIsUniversal ”双击改成值为 1</p><h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul><li><a href="https://v2ex.com/t/330394">https://v2ex.com/t/330394</a></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;修改Windows注册表：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;修改 win10 注册表&lt;br&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation&lt;br&gt;新建一项 DWORD 值</summary>
+    <summary type="html">&lt;h3 id=&quot;修改Windows注册表&quot;&gt;&lt;a href=&quot;#修改Windows注册表&quot; class=&quot;headerlink&quot; title=&quot;修改Windows注册表&quot;&gt;&lt;/a&gt;修改Windows注册表&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;使用快捷键“Win”+ 【R】组合快捷键。在打开</summary>
       
     
     

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2021/07/02/%E9%BB%91%E8%8B%B9%E6%9E%9C-Win10%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E6%99%9A8%E5%B0%8F%E6%97%B6%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2021-07-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/friends/index.html</loc>
     
     <lastmod>2021-07-03</lastmod>
@@ -37,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2021/07/02/%E9%BB%91%E8%8B%B9%E6%9E%9C-Win10%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E6%99%9A8%E5%B0%8F%E6%97%B6%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/</loc>
-    
-    <lastmod>2021-07-02</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/2021/06/30/hello-world/</loc>
     
     <lastmod>2021-06-30</lastmod>
@@ -67,7 +67,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-07-03</lastmod>
+    <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,21 +75,21 @@
   
   <url>
     <loc>http://example.com/tags/centos/</loc>
-    <lastmod>2021-07-03</lastmod>
+    <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E9%9A%8F%E3%81%AE%E6%83%B3/</loc>
-    <lastmod>2021-07-03</lastmod>
+    <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E6%90%9E%E6%9C%BA/</loc>
-    <lastmod>2021-07-03</lastmod>
+    <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -98,7 +98,7 @@
   
   <url>
     <loc>http://example.com/categories/linux/</loc>
-    <lastmod>2021-07-03</lastmod>
+    <lastmod>2021-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
