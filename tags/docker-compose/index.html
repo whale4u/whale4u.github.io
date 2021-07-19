@@ -24,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2021/7 - 雪の迹</title>
+  <title>Tag: docker-compose - 雪の迹</title>
   
 
   
@@ -106,7 +106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -345,7 +345,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="full" class='cover-wrapper  search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -418,14 +418,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
-        
-          
         
           
         
@@ -480,57 +480,6 @@ With Compose, you use a YAML file to configure your application’s services. Th
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/07/02/%E9%BB%91%E8%8B%B9%E6%9E%9C-Win10%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E6%99%9A8%E5%B0%8F%E6%97%B6%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/">
-        黑苹果+Win10双系统时间晚8小时修复方法
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        修改Windows注册表
-使用快捷键“Win”+ 【R】组合快捷键。在打开后面键入命令：regedit
-修改 win10 注册表，点击打开
-
-
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\
-
-新建一项 DWORD 值 名为 “ RealTimeIsUniversal ”双击改成值为 1
-参考文...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-07-02</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2021/07/02/%E9%BB%91%E8%8B%B9%E6%9E%9C-Win10%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E6%99%9A8%E5%B0%8F%E6%97%B6%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -538,7 +487,8 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\
   
 
 
-	
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -713,14 +663,14 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
