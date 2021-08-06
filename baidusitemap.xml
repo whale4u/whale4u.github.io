@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://example.com/2021/08/06/SQL%E6%B3%A8%E5%85%A5%E4%B9%8B%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8/</loc>
+    <lastmod>2021-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2021/08/05/Python%E5%AE%9E%E7%8E%B0SSH%E7%88%86%E7%A0%B4/</loc>
+    <lastmod>2021-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2021/08/05/Hydra%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2021-08-05</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2021/07/18/docker-compose/</loc>
     <lastmod>2021-07-19</lastmod>
   </url>

