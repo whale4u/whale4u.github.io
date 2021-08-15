@@ -95,7 +95,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -103,56 +103,56 @@
   
   <url>
     <loc>http://example.com/tags/hydra/</loc>
-    <lastmod>2021-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/sql%E6%B3%A8%E5%85%A5/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/python/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/ssh/</loc>
-    <lastmod>2021-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/centos/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/docker-compose/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/sql%E6%B3%A8%E5%85%A5/</loc>
+    <lastmod>2021-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/centos/</loc>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E9%9A%8F%E3%81%AE%E6%83%B3/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E6%90%9E%E6%9C%BA/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -161,21 +161,21 @@
   
   <url>
     <loc>http://example.com/categories/security/</loc>
-    <lastmod>2021-08-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/linux/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/docker/</loc>
-    <lastmod>2021-08-06</lastmod>
+    <lastmod>2021-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/linux/</loc>
+    <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

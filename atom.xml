@@ -40,9 +40,9 @@
     <category term="security" scheme="http://example.com/categories/security/"/>
     
     
-    <category term="sql注入" scheme="http://example.com/tags/sql%E6%B3%A8%E5%85%A5/"/>
-    
     <category term="python" scheme="http://example.com/tags/python/"/>
+    
+    <category term="sql注入" scheme="http://example.com/tags/sql%E6%B3%A8%E5%85%A5/"/>
     
   </entry>
   
