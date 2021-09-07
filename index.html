@@ -453,9 +453,59 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/09/08/mybatis%E9%98%B2%E6%AD%A2sql%E6%B3%A8%E5%85%A5/">
+        mybatis防止sql注入
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        Mybatis 的 Mapper.xml 语句中 parameterType 向SQL语句传参有两种方式：#{ } 和 ${ }。
+如何排查是否存在SQL注入？1. 检查是否有$号如果你使用的是ide代码编辑器，那么可以通过全局搜索$&#123; , 快速定位到使用${ }拼接SQL的语句，在去找到外部传入参数的入口，闭合sql证明即可。
+2. 检查是否有order by语句同样的在搜索是否...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2021-09-08</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/security/">security</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/09/08/mybatis%E9%98%B2%E6%AD%A2sql%E6%B3%A8%E5%85%A5/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -1020,7 +1070,7 @@ to be continue …
           <li><a class="flat-box"
             title="/categories/security/" href="/categories/security/"
             id="categoriessecurity"
-            ><div class='name'>security</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>security</div><div class='badge'>(4)</div></a></li>
         
       </ul>
     </div>
@@ -1044,7 +1094,7 @@ to be continue …
 
 
     <div class='content'>
-      <a href="/tags/centos/" style="font-size: 14px; color: #999">centos</a> <a href="/tags/docker-compose/" style="font-size: 14px; color: #999">docker-compose</a> <a href="/tags/hydra/" style="font-size: 14px; color: #999">hydra</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/sql%E6%B3%A8%E5%85%A5/" style="font-size: 14px; color: #999">sql注入</a> <a href="/tags/ssh/" style="font-size: 14px; color: #999">ssh</a> <a href="/tags/%E6%90%9E%E6%9C%BA/" style="font-size: 14px; color: #999">搞机</a> <a href="/tags/%E9%9A%8F%E3%81%AE%E6%83%B3/" style="font-size: 24px; color: #555">随の想</a>
+      <a href="/tags/centos/" style="font-size: 14px; color: #999">centos</a> <a href="/tags/docker-compose/" style="font-size: 14px; color: #999">docker-compose</a> <a href="/tags/hydra/" style="font-size: 14px; color: #999">hydra</a> <a href="/tags/java/" style="font-size: 14px; color: #999">java</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/sql%E6%B3%A8%E5%85%A5/" style="font-size: 24px; color: #555">sql注入</a> <a href="/tags/ssh/" style="font-size: 14px; color: #999">ssh</a> <a href="/tags/%E6%90%9E%E6%9C%BA/" style="font-size: 14px; color: #999">搞机</a> <a href="/tags/%E9%9A%8F%E3%81%AE%E6%83%B3/" style="font-size: 24px; color: #555">随の想</a>
     </div>
   </section>
 
