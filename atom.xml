@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-07T16:51:37.190Z</updated>
+  <updated>2021-09-11T17:45:32.450Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gopher协议</title>
+    <link href="http://example.com/2021/09/12/gopher%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://example.com/2021/09/12/gopher%E5%8D%8F%E8%AE%AE/</id>
+    <published>2021-09-11T17:01:43.000Z</published>
+    <updated>2021-09-11T17:45:32.450Z</updated>
+    
+    <content type="html"><![CDATA[<p>简介：</p><p>gopher协议是一种信息查找系统，他将Internet上的文件组织成某种索引，方便用户从Internet的一处带到另一处。在WWW出现之前，Gopher是Internet上最主要的信息检索工具，Gopher站点也是最主要的站点，使用tcp70端口。但在WWW出现后，Gopher失去了昔日的辉煌。现在它基本过时，人们很少再使用它。它只支持文本，不支持图像。我们现在最多看到使用这个协议的时候都是在去ssrf打redis shell、读mysql数据的时候。</p><p>gopher协议格式:</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gopher://IP:port/_&#123;TCP/IP数据流&#125;</span><br></pre></td></tr></table></figure><ul><li><p>限制：gopher协议在各个编程语言中的使用限制</p><table><thead><tr><th align="left">协议</th><th align="left">支持情况</th></tr></thead><tbody><tr><td align="left">PHP</td><td align="left">–wite-curlwrappers且php版本至少为5.3</td></tr><tr><td align="left">Java</td><td align="left">小于JDK1.7</td></tr><tr><td align="left">Curl</td><td align="left">低版本不支持</td></tr><tr><td align="left">Perl</td><td align="left">支持</td></tr><tr><td align="left">ASP.NET</td><td align="left">小于版本3</td></tr></tbody></table></li></ul><h2 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h2><h3 id="1-使用Gopher协议发送传输信息"><a href="#1-使用Gopher协议发送传输信息" class="headerlink" title="1. 使用Gopher协议发送传输信息"></a>1. 使用Gopher协议发送传输信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl gopher://192.168.109.1:6666/_abcd</span><br><span class="line">发送gopher get请求,可以发现_不会被显示</span><br></pre></td></tr></table></figure><ul><li>  例子：</li></ul><p><img src="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120124810.png" class="lazyload" data-srcset="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120124810.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210912012414777"></p><h3 id="2-使用Gopher协议发送GET请求"><a href="#2-使用Gopher协议发送GET请求" class="headerlink" title="2. 使用Gopher协议发送GET请求"></a>2. 使用Gopher协议发送GET请求</h3><p>在gopher协议中发送HTTP的数据，需要以下三步:</p><ol><li>构造HTTP数据包</li><li>URL编码、替换回车换行为%0d%0a，HTTP包最后加%0d%0a代表消息结束</li><li>发送gopher协议, 协议后的IP一定要接端口</li></ol><ul><li>  例子：</li></ul><p><img src="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120129359.png" class="lazyload" data-srcset="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120129359.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210912012955330"></p><h3 id="3-使用Gopher协议发送POST请求"><a href="#3-使用Gopher协议发送POST请求" class="headerlink" title="3. 使用Gopher协议发送POST请求"></a>3. 使用Gopher协议发送POST请求</h3><p>所以想发送一个完整的POST数据包，以下4个字段是必须的：</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/ssrf/post.php</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>192.168.0.111</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/x-www-form-urlencoded</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>11</span><br><span class="line"> </span><br><span class="line">name=yanshu</span><br></pre></td></tr></table></figure><p>注：用脚本转的时候，每次不同的content-length都是不一样的，需要修改。</p><p><img src="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120144693.png" class="lazyload" data-srcset="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120144693.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p><h2 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h2><ul><li>  脚本</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line">test =\</span><br><span class="line"><span class="string">&quot;&quot;&quot;GET / HTTP/1.1</span></span><br><span class="line"><span class="string">Host: 192.168.10.1</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment">#注意后面一定要有回车，回车结尾表示http请求结束</span></span><br><span class="line">tmp = urllib.parse.quote(test)</span><br><span class="line">new = tmp.replace(<span class="string">&#x27;%0A&#x27;</span>,<span class="string">&#x27;%0D%0A&#x27;</span>)</span><br><span class="line">result = <span class="string">&#x27;_&#x27;</span>+new</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure><ul><li><p>例子</p><p>  <img src="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120141514.png" class="lazyload" data-srcset="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120141514.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210912014149480"></p></li><li><p>参考文章：</p><ol><li> <a href="https://cloud.tencent.com/developer/article/1610645">https://cloud.tencent.com/developer/article/1610645</a></li><li> <a href="https://knowledge.zhaoweiguo.com/build/html/protocol/others/Gopher.html">https://knowledge.zhaoweiguo.com/build/html/protocol/others/Gopher.html</a></li><li> <a href="https://blog.csdn.net/weixin_45887311/article/details/107327706">https://blog.csdn.net/weixin_45887311/article/details/107327706</a></li></ol></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;简介：&lt;/p&gt;
+&lt;p&gt;gopher协议是一种信息查找系统，他将Internet上的文件组织成某种索引，方便用户从Internet的一处带到另一处。在WWW出现之前，Gopher是Internet上最主要的信息检索工具，Gopher站点也是最主要的站点，使用tcp70端口。但</summary>
+      
+    
+    
+    
+    <category term="HTTP" scheme="http://example.com/categories/HTTP/"/>
+    
+    
+    <category term="SSRF" scheme="http://example.com/tags/SSRF/"/>
+    
+  </entry>
   
   <entry>
     <title>mybatis防止sql注入</title>

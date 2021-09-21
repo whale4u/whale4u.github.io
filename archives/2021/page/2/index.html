@@ -24,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: hydra - 雪の迹</title>
+  <title>Archive: 2021 - 雪の迹</title>
   
 
   
@@ -106,7 +106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -345,7 +345,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: none;">
+        <div id="half" class='cover-wrapper  search' style="display: ;">
           
             <div id='cover-backstretch'></div>
           
@@ -418,18 +418,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
-  
-    
-      
+	
+		
   <section class="post-list">
-    
-      
-        
-          
-        
-      
     
     
       
@@ -442,33 +434,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" >
-      <a href="/2021/08/05/Hydra%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
-        Hydra简明教程
+      <a href="/2021/06/28/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/">
+        恰同学少年
       </a>
     </h2>
   
   <div class='md'>
     
       
-        安装centos安装教程：Centos7安装Hydra(爆破神器)
-macos安装：brew install hydra
-使用SSH爆破
-使用密码文件
-
-hydra -l root -P top100_ssh_vps.txt 10.127.127.79 ssh
-
-使用用户名、密码文件
-
-RDP爆破
-使用密码文件
-
-使用用户名、密码文件
-
-
-引用
-密码字典：PasswordDic
-
-
+        引言如果一切都可以重来，你会选择怎样的开始？
+遥远的Ta如果你有兴趣继续看下去，也许也会有耐心听我介绍自己的过去：一个遥远的过去，犹如梦境中的清晨，晶莹剔透的雨滴，顺着老屋的瓦，缓缓坠入沟渠。那是一个仿佛已经很久远的年代。那时候的村庄，没有手机，没有互联网，也没有“非常6+1”的幸运观众。有的只是青山，有的只是小溪，还有傍晚夕阳西下时升起的袅袅炊烟。而我，就是在这个宛如与世隔绝的村庄，度过了...
       
     
   </div>
@@ -476,15 +451,12 @@ RDP爆破
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time>2021-08-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/security/">security</a>
+        <time>2021-06-28</time>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2021/08/05/Hydra%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/'>
+          <a class='readmore' href='/2021/06/28/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4/'>
             Read More
           </a>
         </div>
@@ -501,11 +473,25 @@ RDP爆破
   </section>
   
     
-  
-
-
+      <br>
+      <div class="prev-next">
+        
+          <a class="prev" rel="prev" href="/archives/2021/">
+            <section class="post prev white-box shadow" >
+              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
+            </section>
+          </a>
+        
+        <p class="current">
+          2 / 2
+        </p>
+        
+      </div>
     
   
+
+
+	
 </div>
 <aside class='l_side'>
   
@@ -690,14 +676,14 @@ RDP爆破
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.add("show");
+  l_header.classList.remove("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="none";
-    cover_wrapper.style.display="none";
+    cover_wrapper.id="half";
+    cover_wrapper.style.display="";
     
   
 </script>

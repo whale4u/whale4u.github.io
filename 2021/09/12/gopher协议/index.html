@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,7 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: hydra - 雪の迹</title>
+  <title>gopher协议 - 雪の迹</title>
+  
+    <meta name="keywords" content="SSRF">
   
 
   
@@ -345,7 +345,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -418,94 +418,293 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        gopher协议
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>Whale4u</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2021/08/05/Hydra%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/">
-        Hydra简明教程
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        安装centos安装教程：Centos7安装Hydra(爆破神器)
-macos安装：brew install hydra
-使用SSH爆破
-使用密码文件
-
-hydra -l root -P top100_ssh_vps.txt 10.127.127.79 ssh
-
-使用用户名、密码文件
-
-RDP爆破
-使用密码文件
-
-使用用户名、密码文件
-
-
-引用
-密码字典：PasswordDic
-
-
-      
-    
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/HTTP/">HTTP</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2021-08-05</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 12, 2021</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/security/">security</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="gopher协议" data-path="/2021/09/12/gopher%E5%8D%8F%E8%AE%AE/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>简介：</p>
+<p>gopher协议是一种信息查找系统，他将Internet上的文件组织成某种索引，方便用户从Internet的一处带到另一处。在WWW出现之前，Gopher是Internet上最主要的信息检索工具，Gopher站点也是最主要的站点，使用tcp70端口。但在WWW出现后，Gopher失去了昔日的辉煌。现在它基本过时，人们很少再使用它。它只支持文本，不支持图像。我们现在最多看到使用这个协议的时候都是在去ssrf打redis shell、读mysql数据的时候。</p>
+<p>gopher协议格式:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gopher://IP:port/_&#123;TCP/IP数据流&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>限制：gopher协议在各个编程语言中的使用限制</p>
+<table>
+<thead>
+<tr>
+<th align="left">协议</th>
+<th align="left">支持情况</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">PHP</td>
+<td align="left">–wite-curlwrappers且php版本至少为5.3</td>
+</tr>
+<tr>
+<td align="left">Java</td>
+<td align="left">小于JDK1.7</td>
+</tr>
+<tr>
+<td align="left">Curl</td>
+<td align="left">低版本不支持</td>
+</tr>
+<tr>
+<td align="left">Perl</td>
+<td align="left">支持</td>
+</tr>
+<tr>
+<td align="left">ASP.NET</td>
+<td align="left">小于版本3</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="基础使用"><a href="#基础使用" class="headerlink" title="基础使用"></a>基础使用</h2><h3 id="1-使用Gopher协议发送传输信息"><a href="#1-使用Gopher协议发送传输信息" class="headerlink" title="1. 使用Gopher协议发送传输信息"></a>1. 使用Gopher协议发送传输信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl gopher://192.168.109.1:6666/_abcd</span><br><span class="line">发送gopher get请求,可以发现_不会被显示</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  例子：</li>
+</ul>
+<p><img src="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120124810.png" class="lazyload" data-srcset="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120124810.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210912012414777"></p>
+<h3 id="2-使用Gopher协议发送GET请求"><a href="#2-使用Gopher协议发送GET请求" class="headerlink" title="2. 使用Gopher协议发送GET请求"></a>2. 使用Gopher协议发送GET请求</h3><p>在gopher协议中发送HTTP的数据，需要以下三步:</p>
+<ol>
+<li>构造HTTP数据包</li>
+<li>URL编码、替换回车换行为%0d%0a，HTTP包最后加%0d%0a代表消息结束</li>
+<li>发送gopher协议, 协议后的IP一定要接端口</li>
+</ol>
+<ul>
+<li>  例子：</li>
+</ul>
+<p><img src="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120129359.png" class="lazyload" data-srcset="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120129359.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210912012955330"></p>
+<h3 id="3-使用Gopher协议发送POST请求"><a href="#3-使用Gopher协议发送POST请求" class="headerlink" title="3. 使用Gopher协议发送POST请求"></a>3. 使用Gopher协议发送POST请求</h3><p>所以想发送一个完整的POST数据包，以下4个字段是必须的：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/ssrf/post.php</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>192.168.0.111</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/x-www-form-urlencoded</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>11</span><br><span class="line"> </span><br><span class="line">name=yanshu</span><br></pre></td></tr></table></figure>
+
+<p>注：用脚本转的时候，每次不同的content-length都是不一样的，需要修改。</p>
+<p><img src="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120144693.png" class="lazyload" data-srcset="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120144693.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="img"></p>
+<h2 id="自动化"><a href="#自动化" class="headerlink" title="自动化"></a>自动化</h2><ul>
+<li>  脚本</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line">test =\</span><br><span class="line"><span class="string">&quot;&quot;&quot;GET / HTTP/1.1</span></span><br><span class="line"><span class="string">Host: 192.168.10.1</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment">#注意后面一定要有回车，回车结尾表示http请求结束</span></span><br><span class="line">tmp = urllib.parse.quote(test)</span><br><span class="line">new = tmp.replace(<span class="string">&#x27;%0A&#x27;</span>,<span class="string">&#x27;%0D%0A&#x27;</span>)</span><br><span class="line">result = <span class="string">&#x27;_&#x27;</span>+new</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>例子</p>
+<p>  <img src="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120141514.png" class="lazyload" data-srcset="https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/202109120141514.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="image-20210912014149480"></p>
+</li>
+<li><p>参考文章：</p>
+<ol>
+<li> <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1610645">https://cloud.tencent.com/developer/article/1610645</a></li>
+<li> <a target="_blank" rel="noopener" href="https://knowledge.zhaoweiguo.com/build/html/protocol/others/Gopher.html">https://knowledge.zhaoweiguo.com/build/html/protocol/others/Gopher.html</a></li>
+<li> <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45887311/article/details/107327706">https://blog.csdn.net/weixin_45887311/article/details/107327706</a></li>
+</ol>
+</li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2021/08/05/Hydra%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://example.com/2021/09/12/gopher%E5%8D%8F%E8%AE%AE/>http://example.com/2021/09/12/gopher%E5%8D%8F%E8%AE%AE/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-09-12T01:45:32+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 12, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SSRF/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SSRF</p></a></div>
 
 
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2021/09/12/gopher%E5%8D%8F%E8%AE%AE/&title=gopher协议 - 雪の迹&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2021/09/12/gopher%E5%8D%8F%E8%AE%AE/&title=gopher协议 - 雪の迹&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2021/09/12/gopher%E5%8D%8F%E8%AE%AE/&title=gopher协议 - 雪の迹&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2021/09/08/mybatis%E9%98%B2%E6%AD%A2sql%E6%B3%A8%E5%85%A5/'>
+          <p class='title'>mybatis防止sql注入<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Mybatis 的 Mapper.xml 语句中 parameterType 向SQL语句传参有两种方式：#{ } 和 ${ }。
+如何排查是否存在SQL注入？1. 检查是否有$号如果你使用的是...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -513,168 +712,28 @@ RDP爆破
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://wha1e4u.oss-cn-shenzhen.aliyuncs.com/avatar.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Whale4u</h2>
-        
-        
-          <p>遇见更好的自己.</p>
 
-        
-        
-          <p><span id="jinrishici-sentence">雪の迹</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/HTTP/" href="/categories/HTTP/"
-            id="categoriesHTTP"
-            ><div class='name'>HTTP</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/docker/" href="/categories/docker/"
-            id="categoriesdocker"
-            ><div class='name'>docker</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/linux/" href="/categories/linux/"
-            id="categorieslinux"
-            ><div class='name'>linux</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/security/" href="/categories/security/"
-            id="categoriessecurity"
-            ><div class='name'>security</div><div class='badge'>(4)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8"><span class="toc-text">基础使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8Gopher%E5%8D%8F%E8%AE%AE%E5%8F%91%E9%80%81%E4%BC%A0%E8%BE%93%E4%BF%A1%E6%81%AF"><span class="toc-text">1. 使用Gopher协议发送传输信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8Gopher%E5%8D%8F%E8%AE%AE%E5%8F%91%E9%80%81GET%E8%AF%B7%E6%B1%82"><span class="toc-text">2. 使用Gopher协议发送GET请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8Gopher%E5%8D%8F%E8%AE%AE%E5%8F%91%E9%80%81POST%E8%AF%B7%E6%B1%82"><span class="toc-text">3. 使用Gopher协议发送POST请求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="toc-text">自动化</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/SSRF/" style="font-size: 14px; color: #999">SSRF</a> <a href="/tags/centos/" style="font-size: 14px; color: #999">centos</a> <a href="/tags/docker-compose/" style="font-size: 14px; color: #999">docker-compose</a> <a href="/tags/hydra/" style="font-size: 14px; color: #999">hydra</a> <a href="/tags/java/" style="font-size: 14px; color: #999">java</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/sql%E6%B3%A8%E5%85%A5/" style="font-size: 24px; color: #555">sql注入</a> <a href="/tags/ssh/" style="font-size: 14px; color: #999">ssh</a> <a href="/tags/%E6%90%9E%E6%9C%BA/" style="font-size: 14px; color: #999">搞机</a> <a href="/tags/%E9%9A%8F%E3%81%AE%E6%83%B3/" style="font-size: 24px; color: #555">随の想</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -683,8 +742,8 @@ RDP爆破
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="gopher协议";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
